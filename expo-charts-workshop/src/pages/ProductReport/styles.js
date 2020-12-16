@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     padding: 16,
     alignItems: 'center',
     borderRadius: 24,
-    marginBottom: 32,
+    marginBottom: 14,
   },
   reportButtonText: {
     color: '#88581F',
