@@ -2,7 +2,7 @@ import * as React from "react";
 import { UserFalback } from './components/UserFallback';
 import { UserForm } from "./components/UserForm";
 import { UserView } from './components/UserView';
-import { fetchGithubUser } from "./userService";
+import { fetchGithubUser } from "./services/userService";
 import { REQUEST_STATUS, useAsync } from './utils/index';
 
 const UserInfo = ({ userName }) => {
