@@ -1,63 +1,18 @@
 <h1 align="center">
 	Advanced react-hooks
 </h1>
-<br>
-<br>
 
-<p align="center"> Sample app used during my react-hooks workshop at RocketSeat Dowhile.</p>
+## 🎯 Objective
 
-<br>
-<br>
+Sample app used during advanced react-hooks workshop at RocketSeat Dowhile.
 
-## Getting Started
-
-Clone the repository.
-
-```sh
-git clone https://github.com/vitormalencar/
-```
-
-`cd` into the directory.
-
-```sh
-cd hooks
-```
-
-Install the project dependencies:
-
-```sh
-yarn
-
-# or
-
-npm install
-```
-
-Start the development server:
-
-```sh
-yarn start
-
-# or
-
-npm run start
-```
-
-🚀 Head over to [localhost:3000](http://localhost:3000) in your browser of choice.
-
-💡 Pro tip use the `App.final.js` as you final reference guide
-
-## Toolbelt
+## 🚀Techs
 
 - [x] React as a UI language
 - [x] TailwindCss UI as our design toolkit
+- [x] Github api
 
-## Project Structure
+## 💻 Usage
 
-The project follows a regular [create-react-app](https://github.com/facebook/create-react-app) skeleton with very few modifications.
-
-Under the src folder, we have two main directories:
-
-- `App.js`: the place where the main logic for this workshop
-- `components/`: Components reused across pages
-- `utils.js`: Which contains, as the name suggests, utility shared funcitons,
+1. Run `npm install` or `yarn install`.<br />
+2. Run `yarn start` and access `http://localhost:3000`.<br />
