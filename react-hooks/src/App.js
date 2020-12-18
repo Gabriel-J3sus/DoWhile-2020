@@ -1,8 +1,43 @@
 import * as React from "react";
+import { UserFalback } from './components/UserFallback';
 import { UserForm } from "./components/UserForm";
+import { UserView } from './components/UserView';
+import { fetchGithubUser } from "./userService";
+import { REQUEST_STATUS, useAsync } from './utils/index';
 
 const UserInfo = ({ userName }) => {
-  return <h1>Start here </h1>;
+  const initialRequestStatus = userName ? REQUEST_STATUS.PENDING : REQUEST_STATUS.IDLE;
+
+  const { status, error, data: user, run } = useAsync({
+    status: initialRequestStatus,
+  });
+
+  React.useEffect(() => {
+    if (!userName) return;
+    return run(fetchGithubUser(userName));
+  }, [userName, run]);
+
+  switch (status) {
+    case REQUEST_STATUS.IDLE:
+      return 'Submit user';
+
+    case REQUEST_STATUS.PENDING:
+      return <UserFalback userName={userName} />;
+
+    case REQUEST_STATUS.RESOLVED:
+      return <UserView user={user} />;
+
+    case REQUEST_STATUS.REJECTED:
+      return (
+        <div>
+          There was an error
+          <pre style={{ whiteSpace: 'normal' }}>{error}</pre>
+        </div>
+      );
+
+    default:
+      throw Error(`Unhandled status: ${status}`);
+  }
 };
 
 const UserSection = ({ onSelect, userName }) => (
