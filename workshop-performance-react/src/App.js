@@ -11,7 +11,7 @@ function App() {
     })
   }, [])
   return (
-    <Feed lockAxis="y" posts={posts} onSortEnd={({ oldIndex, newIndex }) => {
+    <Feed lockAxis="x" posts={posts} onSortEnd={({ oldIndex, newIndex }) => {
       setPosts(arrayMove(posts, oldIndex, newIndex));
     }} />
   );
