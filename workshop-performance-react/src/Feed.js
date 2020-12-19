@@ -3,7 +3,7 @@ import { Post } from "./Post"
 import { SortableContainer } from 'react-sortable-hoc';
 import { FixedSizeList as List } from 'react-window';
 
-export const Feed = SortableContainer(({ posts }) => {
+const VirtualFeed = React.memo(({ posts }) => {
     const renderRow = ({ index, style }) => {
         const post = posts[index]
         return (
@@ -24,3 +24,5 @@ export const Feed = SortableContainer(({ posts }) => {
         </List>
     </ul>
 })
+
+export const Feed = SortableContainer(VirtualFeed);
