@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-native": "^0.63.42",
+    "@types/styled-components": "^5.1.7"
+  }
+}
